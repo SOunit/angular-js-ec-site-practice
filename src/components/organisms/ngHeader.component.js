@@ -21,20 +21,25 @@
     ngHeader.updateAuthStatus = async function () {
       if (AuthService.isLogin) {
         AuthService.logout();
+
+        // update state
         ngHeader.isLogin = AuthService.isLogin;
-        ngHeader.user = null;
+
+        // broadcast event
+        $rootScope.$broadcast(constants.ngHeaderLogoutSuccess, {
+          user: AuthService.user,
+        });
       } else {
         await AuthService.login();
+
+        // update state
         $scope.$apply(function () {
           ngHeader.isLogin = AuthService.isLogin;
-          ngHeader.user = AuthService.user;
+        });
 
-          console.log(
-            "constants.ngHeaderLoginSuccess",
-            constants.ngHeaderLoginSuccess
-          );
-
-          $rootScope.$broadcast(constants.ngHeaderLoginSuccess);
+        // broadcast event
+        $rootScope.$broadcast(constants.ngHeaderLoginSuccess, {
+          user: AuthService.user,
         });
       }
     };
