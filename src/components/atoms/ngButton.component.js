@@ -5,6 +5,7 @@
     templateUrl: "src/components/atoms/ngButton.html",
     bindings: {
       buttonText: "@",
+      onClick: "&",
     },
   });
 })();

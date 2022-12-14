@@ -11,5 +11,15 @@
     var ngHeader = this;
 
     ngHeader.isLogin = AuthService.isLogin;
+
+    ngHeader.updateAuthStatus = function () {
+      if (AuthService.isLogin) {
+        AuthService.logout();
+      } else {
+        AuthService.login();
+      }
+
+      ngHeader.isLogin = AuthService.isLogin;
+    };
   }
 })();
