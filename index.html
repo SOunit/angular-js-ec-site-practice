@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EC Site</title>
+    <!-- css -->
     <link rel="stylesheet" href="./src/css/common.css" />
+    <link rel="stylesheet" href="./src/css/components.css" />
     <!-- angular js  -->
     <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
     <!-- module -->
@@ -15,10 +17,12 @@
     <!-- components -->
     <script src="./src/components/organisms/ngHeader.component.js"></script>
     <script src="./src/components/atoms/ngButton.component.js"></script>
+    <script src="./src/components/organisms/userCard.component.js"></script>
   </head>
   <body>
+    <ng-header></ng-header>
     <main>
-      <ng-header></ng-header>
+      <user-card></user-card>
     </main>
   </body>
 </html>

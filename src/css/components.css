@@ -1,0 +1,19 @@
+.ngHeader {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(123, 222, 255);
+  padding: 1rem;
+}
+
+.ngButton {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  color: white;
+  background-color: pink;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.userCard {
+  border: 1px solid palevioletred;
+}

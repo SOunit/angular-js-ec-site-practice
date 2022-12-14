@@ -2,7 +2,7 @@
   "use strict";
 
   angular.module("app").component("ngHeader", {
-    templateUrl: "src/components/organisms/ngHeader.html",
+    templateUrl: "/src/components/organisms/ngHeader.html",
     controller: ngHeaderController,
   });
 
