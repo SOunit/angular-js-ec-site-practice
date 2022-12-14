@@ -11,7 +11,6 @@
     authService.user = null;
 
     authService.login = async function () {
-      console.log("login");
       var id = Math.floor(Math.random() * 10);
 
       try {
@@ -27,8 +26,8 @@
     };
 
     authService.logout = function () {
-      console.log("logout");
       authService.isLogin = false;
+      authService.user = null;
     };
 
     async function _fetchUser(id) {
