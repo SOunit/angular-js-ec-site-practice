@@ -5,20 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./src/css/common.css" />
     <!-- angular js  -->
     <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
     <!-- module -->
     <script src="./main.module.js"></script>
+    <!-- components -->
+    <script src="./src/components/organisms/ngHeader.component.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          Login
-        </ul>
-      </nav>
-    </header>
-    <main></main>
+    <main>
+      <ng-header></ng-header>
+    </main>
   </body>
 </html>
