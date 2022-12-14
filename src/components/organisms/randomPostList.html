@@ -1,6 +1,5 @@
 <div class="randomPostList" ng-init="$ctrl.initPostList()">
   <div class="randomPostList__item" ng-repeat="post in $ctrl.postList">
-    <h2>{{post.title}}</h2>
-    <div>{{post.body}}</div>
+    <post post="post"></post>
   </div>
 </div>
