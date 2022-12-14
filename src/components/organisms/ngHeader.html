@@ -1,0 +1,11 @@
+<header class="ngHeader">
+  <h1>Logo</h1>
+  <nav>
+    <ul>
+      <ng-button
+        button-text="{{$ctrl.isLogin ? 'Logout' : 'Login'}}"
+        on-click="$ctrl.updateAuthStatus()"
+      ></ng-button>
+    </ul>
+  </nav>
+</header>
