@@ -1,8 +1,10 @@
 <header class="ngHeader">
-  <div>{{$ctrl.isLogin ? "Logout" : "Login"}}</div>
+  <h1>Logo</h1>
   <nav>
     <ul>
-      <ng-button button-text="is it working?"></ng-button>
+      <ng-button
+        button-text="{{$ctrl.isLogin ? 'Logout' : 'Login'}}"
+      ></ng-button>
     </ul>
   </nav>
 </header>
