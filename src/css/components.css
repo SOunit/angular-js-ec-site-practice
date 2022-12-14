@@ -1,3 +1,5 @@
+/* mobile style */
+
 .ngHeader {
   display: flex;
   justify-content: space-between;
@@ -17,4 +19,21 @@
 .userCard {
   border: 2px solid palevioletred;
   padding: 1rem;
+}
+
+.randomPostList {
+  border: 2px solid greenyellow;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.randomPostList__item {
+  border: 2px solid blueviolet;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .randomPostList__item {
+    width: 33.33%;
+  }
 }
