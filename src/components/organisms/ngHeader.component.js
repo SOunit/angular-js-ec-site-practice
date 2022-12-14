@@ -7,8 +7,13 @@
   });
 
   // FIXME: better approach without $scope.$apply?
-  ngHeaderController.$inject = ["AuthService", "$scope"];
-  function ngHeaderController(AuthService, $scope) {
+  ngHeaderController.$inject = [
+    "AuthService",
+    "$scope",
+    "$rootScope",
+    "constants",
+  ];
+  function ngHeaderController(AuthService, $scope, $rootScope, constants) {
     var ngHeader = this;
 
     ngHeader.isLogin = AuthService.isLogin;
@@ -23,6 +28,13 @@
         $scope.$apply(function () {
           ngHeader.isLogin = AuthService.isLogin;
           ngHeader.user = AuthService.user;
+
+          console.log(
+            "constants.ngHeaderLoginSuccess",
+            constants.ngHeaderLoginSuccess
+          );
+
+          $rootScope.$broadcast(constants.ngHeaderLoginSuccess);
         });
       }
     };

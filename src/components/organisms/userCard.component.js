@@ -6,15 +6,20 @@
     controller: userCardController,
   });
 
-  userCardController.$inject = ["AuthService"];
-  function userCardController(AuthService) {
+  userCardController.$inject = ["AuthService", "$rootScope", "constants"];
+  function userCardController(AuthService, $rootScope, constants) {
     var $ctrl = this;
 
-    var user = AuthService.user;
-    console.log(user);
+    $rootScope.$on(constants.ngHeaderLoginSuccess, function (event, data) {
+      console.log("event", event);
+      console.log("data", data);
 
-    if (user) {
-      $ctrl.user = user;
-    }
+      var user = AuthService.user;
+      console.log(user);
+
+      if (user) {
+        $ctrl.user = user;
+      }
+    });
   }
 })();
