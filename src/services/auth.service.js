@@ -3,19 +3,37 @@
 
   angular.module("app").service("AuthService", AuthService);
 
-  function AuthService() {
-    var service = this;
+  AuthService.$inject = ["$http"];
+  function AuthService($http) {
+    var authService = this;
 
-    service.isLogin = false;
+    authService.isLogin = false;
+    authService.user = null;
 
-    service.login = function () {
+    authService.login = async function () {
       console.log("login");
-      this.isLogin = true;
+      var id = Math.floor(Math.random() * 10);
+
+      try {
+        var response = await _fetchUser(id);
+      } catch (error) {
+        console.log(error);
+      }
+
+      if (response.status === 200) {
+        authService.user = response.data;
+        authService.isLogin = true;
+      }
     };
 
-    service.logout = function () {
+    authService.logout = function () {
       console.log("logout");
-      this.isLogin = false;
+      authService.isLogin = false;
     };
+
+    async function _fetchUser(id) {
+      var url = `https://jsonplaceholder.typicode.com/users/${id}`;
+      return await $http.get(url);
+    }
   }
 })();
