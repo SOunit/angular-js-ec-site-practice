@@ -1,7 +1,7 @@
 .ngHeader {
   display: flex;
   justify-content: space-between;
-  border: 1px solid rgb(123, 222, 255);
+  border: 2px solid rgb(123, 222, 255);
   padding: 1rem;
 }
 
@@ -15,5 +15,6 @@
 }
 
 .userCard {
-  border: 1px solid palevioletred;
+  border: 2px solid palevioletred;
+  padding: 1rem;
 }
