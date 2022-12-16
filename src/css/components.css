@@ -7,6 +7,24 @@
   padding: 1rem;
 }
 
+.ngHeader__nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  cursor: pointer;
+}
+
+.nav__link--active {
+  color: indigo;
+  font-weight: bold;
+}
+
+.nav__item {
+  margin-right: 1rem;
+}
+
 .ngButton {
   border: none;
   padding: 0.5rem 0.8rem;

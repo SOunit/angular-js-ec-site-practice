@@ -10,8 +10,12 @@
     <link rel="stylesheet" href="./src/css/components.css" />
     <!-- angular js  -->
     <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
+    <!-- ui-router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
     <!-- module -->
     <script src="./main.module.js"></script>
+    <!-- routes -->
+    <script src="/main.routes.js"></script>
     <!-- constants -->
     <script src="./src/constants/constants.module.js"></script>
     <!-- services -->
@@ -26,8 +30,11 @@
   <body>
     <ng-header></ng-header>
     <main>
-      <user-card></user-card>
-      <random-post-list></random-post-list>
+      <!-- <user-card></user-card>
+      <random-post-list></random-post-list> -->
+
+      <!-- ui router -->
+      <ui-view></ui-view>
     </main>
   </body>
 </html>

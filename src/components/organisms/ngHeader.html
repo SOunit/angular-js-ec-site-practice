@@ -1,6 +1,20 @@
 <header class="ngHeader">
   <h1>Logo</h1>
-  <nav>
+  <nav class="ngHeader__nav">
+    <ul class="nav__item">
+      <div class="nav__link" ui-sref="top" ui-sref-active="nav__link--active">
+        Top
+      </div>
+    </ul>
+    <ul class="nav__item">
+      <div
+        class="nav__link"
+        ui-sref="another-page"
+        ui-sref-active="nav__link--active"
+      >
+        Another Page
+      </div>
+    </ul>
     <ul>
       <ng-button
         button-text="{{$ctrl.isLogin ? 'Logout' : 'Login'}}"
