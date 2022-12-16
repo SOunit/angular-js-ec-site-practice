@@ -14,8 +14,8 @@
         url: "/top",
         templateUrl: "/src/pages/top.html",
       })
-      .state("another", {
-        url: "/another",
+      .state("another-page", {
+        url: "/another-page",
         templateUrl: "/src/pages/anotherPage.html",
       });
   }
